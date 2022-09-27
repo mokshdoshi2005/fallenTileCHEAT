@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FALLING TILES</title>
+    <link rel="stylesheet" href="https://fallingtiles.pages.dev/dist/style.css">
+    <script src="/app/js/main.js" type="module"></script>
+    <script src="/app/js/game-logic.js" defer type="module"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="https://fallingtiles.pages.dev/resources/Thumbnail FALicon FallingTiles (2) 1.svg" type="image/x-icon">
+</head>
+<body>
+
+    <ui>
+        <h1 id="mod">Falling Tiles</h1>
+        <p>You are the YELLOW tile.<br>
+        With ever move you play a block will tile randomly<br>
+        OBJECTIVE: achieve high number of moves before falling with the tile.<br>
+        NOTE:EVER NOW AND THEN SOME TILES WILL REAPPEAR</p>
+        <button id="START" class="START" onclick="">Start</button>
+    </ui>
+
+    <div id="GameBoard">
+        <div class="player"></div>
+    </div>
+    <spanMine class="score-board" data-score="0">0</spanMine>
+    <spanMine class="GamePad">
+        <span class="material-symbols-outlined" style="grid-column: 2 / 3;" id="GAMEPAD-UP">
+            arrow_back <!--move up-->
+        </span>
+        <span class="material-symbols-outlined" style="grid-column: 1 / 2;" id="GAMEPAD-LEFT">
+            arrow_back <!--move left-->
+        </span>
+        <p style="grid-column: 2 / 3;text-align: center;" id="mod">Game Pad</p>
+        <span class="material-symbols-outlined" style="grid-column: 3 / 4;" id="GAMEPAD-RIGHT">
+            arrow_forward <!-- move right -->
+        </span>
+        <span class="material-symbols-outlined" style="grid-column: 2 / 3;" id="GAMEPAD-DOWN">
+            arrow_forward <!-- move down -->
+        </span>
+    </spanMine>
+
+    <dialog class="OVER"><h1>Game Over</h1></dialog>
+    
+    <audio autoplay id="game-over-audio"></audio>
+
+</body>
