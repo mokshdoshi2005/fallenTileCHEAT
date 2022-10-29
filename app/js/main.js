@@ -15,6 +15,10 @@ const GAMEPADRIGHT = document.querySelector('#GAMEPAD-RIGHT');
 const GAMEPADLEFT = document.querySelector('#GAMEPAD-LEFT');
 const GAMEPADDOWN = document.querySelector('#GAMEPAD-DOWN');
 
+var cheatNumber = Math.floor(Math.random() * 4)
+console.log(cheatNumber)
+
+
 let Mod_status = false
 console.log('a')
 const MODS = document.querySelectorAll('#mod')
@@ -207,9 +211,8 @@ function RESET() {
 
 function mods(e) {
     if (!e) {
-        var cheatNumber = Math.floor(Math.random() * 4)
-        console.log(cheatNumber)
-        if (parseInt(score_board.dataset.score) == 2){
+        
+        if (parseInt(score_board.dataset.score) == cheatNumber){
             let Ary = LocatePlayer()
             let gameOVER__Sound_effect = document.querySelector("audio",'#game-over-audio');
             gameOVER__Sound_effect.src = 'https://fallingtiles.pages.dev/resources/mixkit-arcade-retro-game-over-213.wav';
