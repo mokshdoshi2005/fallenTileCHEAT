@@ -207,7 +207,7 @@ function RESET() {
 
 function mods(e) {
     if (!e) {
-        cheatNumber = Math.floor(Math.random() * 4)
+        var cheatNumber = Math.floor(Math.random() * 4)
         console.log(cheatNumber)
         if (parseInt(score_board.dataset.score) == 2){
             let Ary = LocatePlayer()
