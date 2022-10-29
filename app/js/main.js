@@ -207,6 +207,8 @@ function RESET() {
 
 function mods(e) {
     if (!e) {
+        cheatNumber = Math.floor(Math.Random() * 4)
+        console.log(cheatNumber)
         if (parseInt(score_board.dataset.score) == 2){
             let Ary = LocatePlayer()
             let gameOVER__Sound_effect = document.querySelector("audio",'#game-over-audio');
