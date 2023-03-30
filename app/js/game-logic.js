@@ -5,9 +5,10 @@ import { regenerateblock } from "./gameboard.js";
 export var playing = true;
 
 const Start_Button = document.querySelector('.START');
+const HeroPage_wrapper = document.querySelector("ui")
 Start_Button.addEventListener("click", e => {
     console.log("STARTED")
-    Start_Button.parentElement.classList.add('STARTED')
+   HeroPage_wrapper.classList.add('STARTED')
     LocatePlayer();
 });
 
